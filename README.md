@@ -1,10 +1,10 @@
 # Translator Pro
 
-一款基于 Electron 和 TypeScript 开发的轻量级、中英双向桌面翻译应用，拥有极简的 "Zen" 审美设计。
+一款基于 Electron 和 TypeScript 开发的轻量级、中英双向桌面翻译应用
 
 ## 📖 项目简介
 
-主要借助AI生成的翻译工具，用于学习和工作。
+主要借助AI生成的翻译工具，用于学习和交流。
 
 ## ✨ 主要功能
 
@@ -28,7 +28,7 @@
 - **构建工具**：[electron-builder](https://www.electron.build/)
 - **翻译服务**：Google Translate API, 有道智云 API, 百度翻译开放平台 API
 
-## � 项目目录说明
+##  项目目录说明
 
 ```text
 .
@@ -49,7 +49,7 @@
 └── tray-icon.png        # 系统托盘图标
 ```
 
-## �🚀 安装与运行
+## 🚀 安装与运行
 
 ### 开发环境准备
 
@@ -57,8 +57,7 @@
 
 1. 克隆项目：
    ```bash
-   git clone https://github.com/sunshine-it/translator-pro.git
-   cd translator
+   git clone https://github.com/sunshinerich/translator-pro.git
    ```
 
 2. 安装依赖：

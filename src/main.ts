@@ -117,25 +117,40 @@ function createWindow() {
     });
 }
 
-app.whenReady().then(() => {
-    createWindow();
+const gotTheLock = app.requestSingleInstanceLock();
 
-    // Global Hotkey: Alt+Space to toggle visibility
-    globalShortcut.register('Alt+Space', () => {
+if (!gotTheLock) {
+    app.quit();
+} else {
+    app.on('second-instance', (event, commandLine, workingDirectory) => {
+        // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
-            if (mainWindow.isVisible()) {
-                mainWindow.hide();
-            } else {
-                mainWindow.show();
-                mainWindow.focus();
-            }
+            if (mainWindow.isMinimized()) mainWindow.restore();
+            if (!mainWindow.isVisible()) mainWindow.show();
+            mainWindow.focus();
         }
     });
 
-    app.on('activate', function () {
-        if (BrowserWindow.getAllWindows().length === 0) createWindow();
+    app.whenReady().then(() => {
+        createWindow();
+
+        // Global Hotkey: Alt+Space to toggle visibility
+        globalShortcut.register('Alt+Space', () => {
+            if (mainWindow) {
+                if (mainWindow.isVisible()) {
+                    mainWindow.hide();
+                } else {
+                    mainWindow.show();
+                    mainWindow.focus();
+                }
+            }
+        });
+
+        app.on('activate', function () {
+            if (BrowserWindow.getAllWindows().length === 0) createWindow();
+        });
     });
-});
+}
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {

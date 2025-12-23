@@ -20,12 +20,11 @@
         "AppImage",
         "deb"
       ],
-      "category": "Utility",
-      "icon": "icon.png"
+      "category": "Utility"
     },
     "win": {
       "target": "nsis",
-      "icon": "icon.png"
+      "icon": "build/icon.ico"
     },
     "files": [
       "dist/**/*",
