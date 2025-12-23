@@ -1,0 +1,52 @@
+{
+  "name": "translation-app",
+  "version": "1.0.0",
+  "description": "English-Chinese Translation App",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "npm run build && electron .",
+    "build": "rm -rf dist && tsc -p tsconfig.main.json && tsc -p tsconfig.renderer.json && cp -r src/ui dist/ && cp index.html dist/",
+    "dist": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "com.sunshine_it.translator",
+    "productName": "Translator Pro",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "icon.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    },
+    "files": [
+      "dist/**/*",
+      "src/ui/**/*",
+      "index.html",
+      "package.json",
+      "icon.png",
+      "tray-icon.png",
+      "node_modules/**/*"
+    ]
+  },
+  "author": {
+    "name": "Sunshine IT",
+    "email": "sunshine@example.com"
+  },
+  "homepage": "https://github.com/sunshine-it/translator-pro",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.0.0",
+    "electron-builder": "^26.0.12",
+    "typescript": "^4.9.0"
+  },
+  "dependencies": {}
+}
