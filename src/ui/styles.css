@@ -117,23 +117,24 @@ body {
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     background: var(--accent-color);
     color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .app-name {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: -0.5px;
     color: var(--text-primary);
+    user-select: none;
 }
 
 .window-controls {
@@ -143,18 +144,19 @@ body {
 }
 
 .win-btn {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     border: none;
     background: transparent;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s;
+    user-select: none;
 }
 
 .win-btn:hover {
@@ -201,7 +203,7 @@ textarea#targetText {
     background: transparent;
     resize: none;
     /* Disable native resize, we use our splitter */
-    font-size: 17px;
+    font-size: 13px;
     line-height: 1.6;
     font-family: inherit;
     padding: 0;
@@ -346,7 +348,7 @@ textarea::placeholder {
 }
 
 .dock-toggle .icon {
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0.5;
     transition: all 0.2s;
     filter: grayscale(100%);
@@ -417,7 +419,7 @@ textarea::placeholder {
 }
 
 .modal-header h2 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text-primary);
 }
@@ -440,7 +442,7 @@ textarea::placeholder {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 600;
     color: var(--text-secondary);
 }
@@ -451,7 +453,7 @@ textarea::placeholder {
     padding: 10px 12px;
     border: 1px solid #e2e8f0;
     border-radius: var(--radius-sm);
-    font-size: 14px;
+    font-size: 11px;
     outline: none;
     transition: all 0.2s;
     background: #f8fafc;
@@ -481,7 +483,7 @@ textarea::placeholder {
     color: white;
     border: none;
     border-radius: var(--radius-md);
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
